@@ -1,0 +1,31 @@
+{
+  "name": "assistant-drinker",
+  "version": "0.0.0",
+  "description": "LINE chatbot.",
+  "main": "app.js",
+  "module": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chalermchon/assistant-drinker.git"
+  },
+  "author": "Chalermchon Onbua and Siripong Chusri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chalermchon/assistant-drinker/issues"
+  },
+  "homepage": "https://github.com/Chalermchon/assistant-drinker#readme",
+  "dependencies": {
+    "actions-on-google": "^2.13.0",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "dialogflow-fulfillment": "^0.6.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.2.0"
+  }
+}
