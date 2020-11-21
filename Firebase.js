@@ -3,7 +3,7 @@ import admin from 'firebase-admin';
 const { SERVICE_ACCOUNT_JSON } = process.env;
 
 const firebase = admin.initializeApp({
-    credential: admin.credential.cert(SERVICE_ACCOUNT_JSON),
+    credential: admin.credential.cert(JSON.parse(SERVICE_ACCOUNT_JSON)),
     storageBucket: "doctor-natt-por-took-satabun.appspot.com"
 });
 const firestore = firebase.firestore();
