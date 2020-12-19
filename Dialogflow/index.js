@@ -152,6 +152,33 @@ export default ((request, response) => {
         agent.add(`และสามารถดื่ม${type}ได้ไม่เกิน ${limitPerWeek} ${container}ต่อสัปดาห์ค่ะ`)
     }
 
+    const setDrinkingInWeek = async () => {
+        let { type, percent, container, volume, numberOfDrinks, thisDay, prevDay } = agent.parameters;
+
+        const user = await userDB.get(userId)
+        if (thisDay !== 'วันนี้' && !user.drinkingInWeek[prevDay]) {
+            return agent.add(createQuickReply(`คุณยังไม่ได้ให้ข้อมูลของ${prevDay}เลยนะคะ`, [
+                `กรอกข้อมูลของ${prevDay}`
+            ]))
+        }
+        if (!type) {
+            agent.add(`${thisDay} คุณดื่มเครื่องดื่มแอลกอฮอล์ชนิดใดคะ`);
+            return agent.add(new Payload('LINE', imageCarousels.alcohol().types.all, { sendAsMessage: true }));
+        } else if (!percent) {
+            agent.add(`คุณดื่ม${type}ประเภทใดคะ`);
+            return agent.add(new Payload('LINE', imageCarousels.alcohol().types[type], { sendAsMessage: true }));
+        } else if (!container) {
+            agent.add(`คุณใช้ภาชนะอะไร และปริมาตรเท่าไหร่ในการดื่ม${type}คะ`);
+            return agent.add(new Payload('LINE', imageCarousels.alcohol().containerSize, { sendAsMessage: true }));
+        } else if (!numberOfDrinks) {
+            return agent.add(`ดื่มประมาณกี่${container}คะ`);
+        }
+
+        await userDB.setDrinkingInWeek(userId, thisDay, {
+            type, percent, container, volume, numberOfDrinks
+        })
+    }
+
     // Run the proper function handler based on the matched Dialogflow intent name
     let intentMap = new Map();
     intentMap.set('check connect', checkConnect);

@@ -6,7 +6,12 @@
   "module": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r esm app.js"
+    "start": "node -r esm app.js",
+    "dev": "nodemon -r dotenv/config -r esm app.js"
+  },
+  "engines": {
+    "node": "12.18",
+    "npm": "6.14"
   },
   "repository": {
     "type": "git",
@@ -20,12 +25,15 @@
   "homepage": "https://github.com/Chalermchon/assistant-drinker#readme",
   "dependencies": {
     "actions-on-google": "^2.13.0",
-    "axios": "^0.20.0",
-    "body-parser": "^1.19.0",
+    "axios": "^0.21.0",
     "crypto": "^1.0.1",
     "dialogflow-fulfillment": "^0.6.1",
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "firebase-admin": "^9.2.0"
+    "firebase-admin": "^9.4.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
   }
 }
