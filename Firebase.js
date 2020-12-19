@@ -49,6 +49,9 @@ export const userDB = {
     async setAuditCPoint(userId, point) {
         return await userColl.doc(userId).update({auditCPoint: point});
     },
+    async setDrinkingInWeek (userId, day, drinkingInDay) {
+        return await userColl.doc(userId).update({ [`drinkingInWeek.${day}`]: drinkingInDay })
+    }
 };
 
 export const getImage = async (dirName, fileName) => {
