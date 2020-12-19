@@ -2,7 +2,7 @@ import { post, get } from 'axios';
 import crypto from 'crypto';
 import { userDB } from './Firebase';
 
-const { CHANNEL_ACCESS_TOKEN ,CHANNEL_SECRET } = process.env;
+const { CHANNEL_ACCESS_TOKEN , CHANNEL_SECRET } = process.env;
 
 const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message";
 const LINE_PROFILE_API = "https://api.line.me/v2/bot/profile";
@@ -48,7 +48,7 @@ const follow = async (userId, replyToken) => {
     await userDB.create(userId);
     await delayReply(userId, replyToken, [
         `ยินดีที่ได้รู้จักค่ะคุณ ${name}`,
-        'ฉันชื่อ... เป็นบอทที่จะช่วยเป็นผู้ช่วยวางแผนและจัดการปัญหาการดื่มของคุณนะคะ',
+        'ฉันชื่อน้องตั้งใจ เป็นบอทที่จะช่วยเป็นผู้ช่วยวางแผนและจัดการปัญหาการดื่มของคุณนะคะ',
         'การสนทนาของเราจะถูกเก็บไว้เป็นความลับ และจะถูกใช้เพื่อการวิจัยและพัฒนาเท่านั้น ตัวตนของคุณจะไม่ถูกเปิดเผยแน่นอนค่ะ',
         'และเพื่อให้เราสามารถให้คำแนะนำคุณได้อย่างแม่นยำมากที่สุด',
     ]);
