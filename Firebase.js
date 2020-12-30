@@ -3,7 +3,7 @@ import admin from 'firebase-admin';
 const { SERVICE_ACCOUNT_JSON } = process.env;
 
 const firebase = admin.initializeApp({
-    credential: admin.credential.cert(SERVICE_ACCOUNT_JSON),
+    credential: admin.credential.cert(JSON.parse(SERVICE_ACCOUNT_JSON)),
     storageBucket: "assistant-drinker.appspot.com"
 });
 const firestore = firebase.firestore();
@@ -48,6 +48,9 @@ export const userDB = {
     },
     async setAuditCPoint(userId, point) {
         return await userColl.doc(userId).update({auditCPoint: point});
+    },
+    async setAssistPoint(userId, point) {
+        return await userColl.doc(userId).update({assistPoint: point});
     },
     async setDrinkingInWeek (userId, day, drinkingInDay) {
         return await userColl.doc(userId).update({ [`drinkingInWeek.${day}`]: drinkingInDay })
