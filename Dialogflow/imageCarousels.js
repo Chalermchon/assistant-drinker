@@ -8,76 +8,220 @@ export const alcohol = () => {
                     type: "image_carousel",
                     columns: [
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/AlcoholType%2Fwine.png?alt=media&token=09980ffa-312a-4cf7-8266-08671957fff1",
-                            action: {
-                                type: "message",
-                                label: "ไวน์",
-                                text: "ไวน์"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/AlcoholType%2Fspirits.png?alt=media&token=877e1604-c2f0-4c95-a992-90995e159977",
-                            action: {
-                                type: "message",
-                                label: "สุรา",
-                                text: "สุรา"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/AlcoholType%2Fcider.png?alt=media&token=e3909083-e14c-4eab-b489-94e076bbb1de",
-                            action: {
-                                type: "message",
-                                label: "ไซเดอร์",
-                                text: "ไซเดอร์"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/AlcoholType%2Fbeer.png?alt=media&token=27474a00-b858-4cc0-97df-23c3c5fa4980",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FBeer.png?alt=media&token=72c1a8c6-308c-4919-986e-92ddc4585e31",
                             action: {
                                 type: "message",
                                 label: "เบียร์",
                                 text: "เบียร์"
                             }
                         },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FBooze.png?alt=media&token=c5c5aa8e-6901-4c49-af26-026cca4d90fb",
+                            action: {
+                                type: "message",
+                                label: "สุราสี",
+                                text: "สุราสี"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FWhiteBooze.png?alt=media&token=b4deec42-9c56-4770-b5c4-1f241c2b4561",
+                            action: {
+                                type: "message",
+                                label: "สุราขาว",
+                                text: "สุราขาว"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FLocalBooze.png?alt=media&token=f77c0ce8-2e4b-40ff-b2bc-4f93f22de175",
+                            action: {
+                                type: "message",
+                                label: "สุราพื้นเมือง",
+                                text: "สุราพื้นเมือง"
+                            }
+                        },{
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FWine.png?alt=media&token=4d50efa0-5ad3-45a5-aca8-01a47294461f",
+                            action: {
+                                type: "message",
+                                label: "ไวน์",
+                                text: "ไวน์"
+                            }
+                        },{
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FWineCooler.png?alt=media&token=29a1d0d1-dbb4-4f7c-b136-c4464b7b8f20",
+                            action: {
+                                type: "message",
+                                label: "ไวน์คูลเลอร์",
+                                text: "ไวน์คูลเลอร์"
+                            }
+                        },{
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Type%2FOther.png?alt=media&token=662b6bd1-c5aa-4c3f-aee0-da67a3c97269",
+                            action: {
+                                type: "message",
+                                label: "เครื่องดื่มอื่นๆ",
+                                text: "เครื่องดื่มอื่นๆ"
+                            }
+                        }
                     ]
                 }
-            },
-            ไวน์: {
+            }
+        },
+        containerSize: {
+            all: {
                 type: "template",
-                altText: "เลือกปริมาณแอลกอฮอล์ของไวน์ที่คุณดื่ม",
+                altText: "เลือกภาชนะที่คุณมักจะดื่ม",
                 template: {
                     type: "image_carousel",
                     columns: [
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/wineType%2Fwine%2012%25.png?alt=media&token=87c068df-d209-4a2f-a49b-53436ac34742",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%2050mL.png?alt=media&token=2ddf61a2-669c-49d8-bd06-f05d21600600",
                             action: {
                                 type: "message",
-                                label: "ไวน์ 12%",
-                                text: "ไวน์ 12%"
+                                label: "แก้ว 50mL",
+                                text: "แก้ว 50mL"
                             }
                         },
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/wineType%2Fwine%2012.5%25.png?alt=media&token=cf1f48bf-0576-475f-9283-6c9c848b9c89",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20165mL.png?alt=media&token=2f5876bf-d513-4831-8ba1-fbf0a78b015b",
                             action: {
                                 type: "message",
-                                label: "ไวน์ 12.5%",
-                                text: "ไวน์ 12.5%"
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
                             }
                         },
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/wineType%2Fwine%2013%25.png?alt=media&token=c5f2f67d-ae4e-4d7c-a2e7-e3bdad176744",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCan%20330mL.png?alt=media&token=7ee82ea5-a88c-4e53-ad06-54869db9aa76",
                             action: {
                                 type: "message",
-                                label: "ไวน์ 13%",
-                                text: "ไวน์ 13%"
+                                label: "กระป๋อง 330mL",
+                                text: "กระป๋อง 330mL"
                             }
                         },
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/wineType%2Fwine%2014%25%20.png?alt=media&token=b94db090-b2db-434c-bc4b-085352fb7edf",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCan%20500mL.png?alt=media&token=7677b72d-37c1-40a6-bf11-cf37722a108b",
                             action: {
                                 type: "message",
-                                label: "ไวน์ 14%",
-                                text: "ไวน์ 14%"
+                                label: "กระป๋อง 500mL",
+                                text: "กระป๋อง 500mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%20330mL.png?alt=media&token=2d574fa0-4b0b-4d84-bdd6-53edfd017f46",
+                            action: {
+                                type: "message",
+                                label: "ขวด 330mL",
+                                text: "ขวด 330mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%20350mL.png?alt=media&token=6b1a472b-c025-4f82-a2e3-96f4ecf6db5f",
+                            action: {
+                                type: "message",
+                                label: "ขวด 350mL",
+                                text: "ขวด 350mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%20640mL.png?alt=media&token=bc9ccb5f-fe89-4d24-b324-fd837a655020",
+                            action: {
+                                type: "message",
+                                label: "ขวด 640mL",
+                                text: "ขวด 640mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%20700mL.png?alt=media&token=efcbb692-8a27-49f0-a576-e0b577766f24",
+                            action: {
+                                type: "message",
+                                label: "ขวด 700mL",
+                                text: "ขวด 700mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FJar%201L.png?alt=media&token=96235666-d72e-40f8-a8b9-827cde04b68d",
+                            action: {
+                                type: "message",
+                                label: "เหยือก 1000mL",
+                                text: "เหยือก 1000mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%201L.png?alt=media&token=d3325d6c-f3b1-4e1d-8cfb-7739aa067f9e",
+                            action: {
+                                type: "message",
+                                label: "ขวด 1000mL",
+                                text: "ขวด 1000mL"
+                            }
+                        },
+                    ]
+                }
+            },
+            ไวน์คูลเลอร์: {
+                type: "template",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
+                template: {
+                    type: "image_carousel",
+                    columns: [
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%2050mL.png?alt=media&token=2ddf61a2-669c-49d8-bd06-f05d21600600",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 50mL",
+                                text: "แก้ว 50mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20100mL.png?alt=media&token=570371ff-9650-4b5e-b823-0f450048ab80",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 100mL",
+                                text: "แก้ว 100mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass2%20165mL.png?alt=media&token=57418b9b-25f9-4f4c-8f61-077f8ff7eb3b",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20165mL.png?alt=media&token=2f5876bf-d513-4831-8ba1-fbf0a78b015b",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCan%20250mL.png?alt=media&token=6622d4ef-314b-4c04-930b-15978b50a3d8",
+                            action: {
+                                type: "message",
+                                label: "กระป๋อง 250mL",
+                                text: "กระป๋อง 250mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCan%20330mL.png?alt=media&token=7ee82ea5-a88c-4e53-ad06-54869db9aa76",
+                            action: {
+                                type: "message",
+                                label: "กระป๋อง 330mL",
+                                text: "กระป๋อง 330mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%20275mL.png?alt=media&token=eb0f4b94-c350-4135-b4c0-730b0453a529",
+                            action: {
+                                type: "message",
+                                label: "ขวด 275mL",
+                                text: "ขวด 275mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FBottle%20330mL.png?alt=media&token=2d574fa0-4b0b-4d84-bdd6-53edfd017f46",
+                            action: {
+                                type: "message",
+                                label: "ขวด 330mL",
+                                text: "ขวด 330mL"
                             }
                         },
                     ]
@@ -85,208 +229,162 @@ export const alcohol = () => {
             },
             เบียร์: {
                 type: "template",
-                altText: "เลือกปริมาณแอลกอฮอล์ของเบียร์ที่คุณดื่ม",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
                 template: {
                     type: "image_carousel",
                     columns: [
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/beerType%2Fbeer%202.5%25.png?alt=media&token=bcf7b884-1d7f-4298-aad5-259cbe7940f4",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%2050mL.png?alt=media&token=2ddf61a2-669c-49d8-bd06-f05d21600600",
                             action: {
                                 type: "message",
-                                label: "เบียร์ 2.5%",
-                                text: "เบียร์ 2.5%"
+                                label: "แก้ว 50mL",
+                                text: "แก้ว 50mL"
                             }
                         },
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/beerType%2Fbeer%204%25.png?alt=media&token=06317dd1-deac-4ecb-974b-17c79b7a003a",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20100mL.png?alt=media&token=570371ff-9650-4b5e-b823-0f450048ab80",
                             action: {
                                 type: "message",
-                                label: "เบียร์ 4%",
-                                text: "เบียร์ 4%"
+                                label: "แก้ว 100mL",
+                                text: "แก้ว 100mL"
                             }
                         },
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/beerType%2Fbeer%204.2%25.png?alt=media&token=d4d09c59-59a6-481e-9370-28cf9601b12c",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass2%20165mL.png?alt=media&token=57418b9b-25f9-4f4c-8f61-077f8ff7eb3b",
                             action: {
                                 type: "message",
-                                label: "เบียร์ 4.2%",
-                                text: "เบียร์ 4.2%"
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
                             }
                         },
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/beerType%2Fbeer%205%25.png?alt=media&token=75e04cc9-30aa-410c-9662-a7570468ee74",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20165mL.png?alt=media&token=2f5876bf-d513-4831-8ba1-fbf0a78b015b",
                             action: {
                                 type: "message",
-                                label: "เบียร์ 5%",
-                                text: "เบียร์ 5%"
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
+                            }
+                        }
+                    ]
+                }
+            },
+            ไวน์: {
+                type: "template",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
+                template: {
+                    type: "image_carousel",
+                    columns: [
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%2050mL.png?alt=media&token=2ddf61a2-669c-49d8-bd06-f05d21600600",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 50mL",
+                                text: "แก้ว 50mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20100mL.png?alt=media&token=570371ff-9650-4b5e-b823-0f450048ab80",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 100mL",
+                                text: "แก้ว 100mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass2%20165mL.png?alt=media&token=57418b9b-25f9-4f4c-8f61-077f8ff7eb3b",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%20165mL.png?alt=media&token=2f5876bf-d513-4831-8ba1-fbf0a78b015b",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 165mL",
+                                text: "แก้ว 165mL"
+                            }
+                        }
+                    ]
+                }
+            },
+            สุราพื้นเมือง: {
+                type: "template",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
+                template: {
+                    type: "image_carousel",
+                    columns: [
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCap%2015mL.png?alt=media&token=c7f6ee23-ca9d-4a85-be59-787c5cbfc2b6",
+                            action: {
+                                type: "message",
+                                label: "ฝา 15mL",
+                                text: "ฝา 15mL"
+                            }
+                        },
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FGlass%2050mL.png?alt=media&token=2ddf61a2-669c-49d8-bd06-f05d21600600",
+                            action: {
+                                type: "message",
+                                label: "แก้ว 50mL",
+                                text: "แก้ว 50mL"
                             }
                         },
                     ]
                 }
             },
-            ไซเดอร์: {
+            สุราสี: {
                 type: "template",
-                altText: "เลือกปริมาณแอลกอฮอล์ของไซเดอร์ที่คุณดื่ม",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
                 template: {
                     type: "image_carousel",
                     columns: [
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ciderType%2Fcider%205%25.png?alt=media&token=40999ce8-217d-4742-92a5-6d8f1742501f",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCap%2015mL.png?alt=media&token=c7f6ee23-ca9d-4a85-be59-787c5cbfc2b6",
                             action: {
                                 type: "message",
-                                label: "ไซเดอร์ 5%",
-                                text: "ไซเดอร์ 5%"
+                                label: "ฝา 15mL",
+                                text: "ฝา 15mL"
                             }
                         },
                     ]
                 }
             },
-            สุรา: {
+            สุราขาว: {
                 type: "template",
-                altText: "เลือกปริมาณแอลกอฮอล์ของสุราที่คุณดื่ม",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
                 template: {
                     type: "image_carousel",
                     columns: [
                         {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/spiritsType%2Fspirits%206%25.png?alt=media&token=1f7ea068-c65e-4a39-9cde-05d89366e447",
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCap%2015mL.png?alt=media&token=c7f6ee23-ca9d-4a85-be59-787c5cbfc2b6",
                             action: {
                                 type: "message",
-                                label: "สุรา 6%",
-                                text: "สุรา 6%"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/spiritsType%2Fspirits%2037%25.png?alt=media&token=c8c68777-0833-4c86-b45b-5485c6ed04fc",
-                            action: {
-                                type: "message",
-                                label: "สุรา 37%",
-                                text: "สุรา 37%"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/spiritsType%2FspiritsB%2037.5%25.png?alt=media&token=57a25ee1-163a-4d2d-9fa6-06881f33adb2",
-                            action: {
-                                type: "message",
-                                label: "สุรา 37.5%",
-                                text: "สุรา 37.5%"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/spiritsType%2Fspirits%2040%25.png?alt=media&token=5c4dd7a3-9b4e-444f-adad-03f59b2d9d8a",
-                            action: {
-                                type: "message",
-                                label: "สุรา 40%",
-                                text: "สุรา 40%"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/spiritsType%2Fspirits%2045%25%20.png?alt=media&token=aef14665-3ba9-4203-afec-b2f8d8cb7a2c",
-                            action: {
-                                type: "message",
-                                label: "สุรา 45%",
-                                text: "สุรา 45%"
-                            }
-                        },
-                        {
-                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/spiritsType%2Fspirits%2047%25.png?alt=media&token=453b4089-5cdb-487f-b41f-895935c24862",
-                            action: {
-                                type: "message",
-                                label: "สุรา 47%",
-                                text: "สุรา 47%"
+                                label: "ฝา 15mL",
+                                text: "ฝา 15mL"
                             }
                         },
                     ]
                 }
-            }
-        },
-        containerSize: {
-            type: "template",
-            altText: "เลือกภาชนะที่คุณมักจะดื่ม",
-            template: {
-                type: "image_carousel",
-                columns: [
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fglass%20100ml.png?alt=media&token=87c4da3e-ab2e-4a9f-8389-aae0ca93d9cd",
-                        action: {
-                            type: "message",
-                            label: "แก้ว 100ml",
-                            text: "แก้ว 100ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fcan%20330ml.png?alt=media&token=2dd1edb6-a6f5-4baa-a7b1-bcd3ae58c7d7",
-                        action: {
-                            type: "message",
-                            label: "กระป๋อง 330ml",
-                            text: "กระป๋อง 330ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fcan%20440ml%20.png?alt=media&token=faa9cf44-52f6-4824-a068-c26fc396fb2e",
-                        action: {
-                            type: "message",
-                            label: "กระป๋อง 440ml",
-                            text: "กระป๋อง 440ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%2050ml.png?alt=media&token=2347ce79-8873-4e82-97e7-7e72cffd1ca2",
-                        action: {
-                            type: "message",
-                            label: "ขวด 50ml",
-                            text: "ขวด 50ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%20275ml.png?alt=media&token=0157040e-43ad-4b19-9f14-8430910ea020",
-                        action: {
-                            type: "message",
-                            label: "ขวด 275ml",
-                            text: "ขวด 275ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%20330ml.png?alt=media&token=ceb3d0a3-fc36-4861-a143-4d82f0c61725",
-                        action: {
-                            type: "message",
-                            label: "ขวด 330ml",
-                            text: "ขวด 330ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%20335ml.png?alt=media&token=67d8e554-1a79-40a4-8783-391c292c237e",
-                        action: {
-                            type: "message",
-                            label: "ขวด 335ml",
-                            text: "ขวด 335ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%20700ml.png?alt=media&token=b2efe77e-8bd9-4d05-8c63-a14c77494e32",
-                        action: {
-                            type: "message",
-                            label: "ขวด 700ml",
-                            text: "ขวด 700ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%20750ml.png?alt=media&token=6da225dc-3ccb-4791-bf4d-0c552d8a30ae",
-                        action: {
-                            type: "message",
-                            label: "ขวด 750ml",
-                            text: "ขวด 750ml"
-                        }
-                    },
-                    {
-                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/doctor-natt-por-took-satabun.appspot.com/o/ContainerSize%2Fbottle%201000ml.png?alt=media&token=ed5ec703-d304-4f78-8a75-c130306a167a",
-                        action: {
-                            type: "message",
-                            label: "ขวด 1000ml",
-                            text: "ขวด 1000ml"
-                        }
-                    },
-                ]
-            }
+            },
+            เครื่องดื่มอื่นๆ: {
+                type: "template",
+                altText: "เลือกภาชนะที่คุณมักจะใช้ดื่มไวน์คูลเลอร์ค่ะ",
+                template: {
+                    type: "image_carousel",
+                    columns: [
+                        {
+                            imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Container%2FCap%2015mL.png?alt=media&token=c7f6ee23-ca9d-4a85-be59-787c5cbfc2b6",
+                            action: {
+                                type: "message",
+                                label: "ฝา 15mL",
+                                text: "ฝา 15mL"
+                            }
+                        },
+                    ]
+                }
+            },
         }
     })
 }
