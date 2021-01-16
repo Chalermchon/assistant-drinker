@@ -388,3 +388,55 @@ export const alcohol = () => {
         }
     })
 }
+
+export const motivation = () => {
+    return ({
+        type: "template",
+        altText: "This is an image carousel template",
+        template: {
+          type: "image_carousel",
+          columns: [
+            {
+              imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Motivation%2F1.png?alt=media&token=75d2b96e-5c0e-4811-9388-e33bfc711340",
+              action: {
+                type: "message",
+                label: "ไม่มีปัญหา",
+                text: "ฉันคิดว่าการดื่มของฉันไม่มีปัญหาอะไร"
+              }
+            },
+            {
+              imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Motivation%2F2.png?alt=media&token=fe2d9ab3-80f1-4590-b1b2-24cf072b3f3f",
+              action: {
+                type: "message",
+                label: "คิดดื่มน้อยลง",
+                text: "ฉันคิดเกี่ยวกับการดื่มให้น้อยลงบ้าง"
+              }
+            },
+            {
+                imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Motivation%2F3.png?alt=media&token=0981c687-7ccd-4067-87ff-37cbe391506d",
+                action: {
+                    type: "message",
+                    label: "อยากดื่มน้อยลง",
+                    text: "ฉันต้องสินใจว่าจะต้องดื่มให้น้อยลง"
+                  }
+              },
+              {
+                imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Motivation%2F4.png?alt=media&token=000526d6-f44d-40b9-be83-7d587f4341f8",
+                action: {
+                    type: "message",
+                    label: "พร้อมดื่มน้อยลง",
+                    text: "ฉันพร้อมแล้วที่จะเริ่มดื่มให้น้อยลง"
+                  }
+              },
+              {
+                imageUrl: "https://firebasestorage.googleapis.com/v0/b/assistant-drinker.appspot.com/o/Motivation%2F5.png?alt=media&token=36d41607-51ce-4a66-8d9b-d5abdcf809d1",
+                action: {
+                    type: "message",
+                    label: "ฉันดื่มน้อยลง",
+                    text: "ตอนนี้ฉันดื่มน้อยลงกว่าเมื่อก่อนแล้ว"
+                  }
+              },
+          ]
+        }
+      })
+}

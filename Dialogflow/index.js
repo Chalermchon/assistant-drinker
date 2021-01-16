@@ -98,14 +98,6 @@ export default ((request, response) => {
                             type: "action",
                             action: {
                                 type: "message",
-                                label: 'ไม่เคย',
-                                text: 'ไม่เคย'
-                            }
-                        },
-                        {
-                            type: "action",
-                            action: {
-                                type: "message",
                                 label: 'เคย',
                                 text: 'เคย'
                             }
@@ -114,10 +106,10 @@ export default ((request, response) => {
                             type: "action",
                             action: {
                                 type: "message",
-                                label: '.',
-                                text: 'เคย ไม่ได้ดื่ม ไม่เคยเลย ไม่เคยเลย'
+                                label: 'ไม่เคย',
+                                text: 'ไม่เคย'
                             }
-                        }
+                        },
                     ]
                 }
             },
@@ -707,7 +699,7 @@ export default ((request, response) => {
 
         if(resultWeek === 'ไม่เกิน' && resultDay ==='ไม่เกิน' && resultRisk ==='ต่ำ'){
             result = 'และ';
-        }else if((resultWeek === 'เกิน' || resultDay ==='เกิน') && resultRisk !=='ต่ำ'){
+        }else if(((resultWeek === 'เกิน' && resultDay ==='ไม่เกิน') || (resultWeek === 'ไม่เกิน' && resultDay ==='เกิน')) && resultRisk !=='ต่ำ'){
             result = 'และ';
         }else{
             result = 'แต่';
@@ -718,7 +710,7 @@ export default ((request, response) => {
             `LINE`,
             {
                 "type": "text",
-                "text": "คุณอยากรู้รายละเอียดของการดื่มที่เสี่ยงต่ำ เสี่ยงปานกลาง และ และเสี่ยงสูง ไหมคะว่าคืออะไร และแตกต่างกันอย่างไร",
+                "text": "คุณอยากรู้รายละเอียดของการดื่มที่เสี่ยงต่ำ เสี่ยงปานกลาง และเสี่ยงสูง ไหมคะว่าคืออะไร และแตกต่างกันอย่างไร",
                 "quickReply": {
                     "items": [
                         {
@@ -744,10 +736,100 @@ export default ((request, response) => {
         ))
     }
 
+    const assessMotivation = async () => {
+        agent.add(`น้องตั้งใจอยากให้คุณอ่านและคิดเกี่ยวกับข้อความ 5 ข้อความต่อไปนี้นะคะ ว่าประโยคไหนที่ตรงกับใจของคุณมากที่สุด`);
+        return agent.add(new Payload('LINE', imageCarousels.motivation(), { sendAsMessage: true }));
+    }
+
+    const assessMotivationResult = async () => {
+        let motivation = agent.parameters;
+        if(motivation == 1){
+            agent.add('ตอนนี้ คุณยังไม่เห็นว่าการดื่มเช่นนี้จะก่อให้เกิดปัญหาใดๆ');
+        }else if(motivation == 2){
+            agent.add('เหมือนว่าคุณเริ่มรู้สึกลังเลเกี่ยวกับการดื่ม คุณอาจกังวลถึงผลเสียที่อาจจะเกิดขึ้น หากคุณยังคงดื่มเช่นนี้ต่อไป หรือคุณอาจกำลังคิดว่า อะไรๆน่าจะดีขึ้นถ้าคุณหยุดดื่มได้')
+        }else if(motivation == 3){
+            agent.add('เหมือนคุณตัดสินใจแล้วว่าคุณอยากที่จะปรับเปลี่ยนตัวเองเกี่ยวกับเรื่องการดื่ม')
+        }else if(motivation == 4){
+            agent.add('เยี่ยมมากค่ะ” “คุณกำลังจะลงมือทำอย่างจริงจังแล้ว')
+        }else if(motivation == 5){
+            agent.add('เยี่ยมมากค่ะ” “คุณลงมือเปลี่ยนแปลงตัวเองมาช่วงหนึ่งแล้ว')
+        }
+
+        return agent.add(new Payload(
+            `LINE`,
+            {
+                "type": "text",
+                "text": "ถ้าน้องตั้งใจพูดถึงสิ่งต่อไปนี้ คุณคิดว่าเรื่องไหนที่จะเป็นเป้าหมายของคุณในการปรับเปลี่ยนพฤติกรรมการดื่มคะ",
+                "quickReply": {
+                    "items": [
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "text": `สุขภาพดีขึ้น`,
+                                "label": `สุขภาพดีขึ้น`
+                            }
+                        },
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "label": "การเรียน การงานดีขึ้น",
+                                "text": `การเรียน การงานดีขึ้น`
+                            }
+                        },
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "label": "การเงินดีขึ้น",
+                                "text": `การเงินดีขึ้น`
+                            }
+                        },
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "label": "ความสัมพันธ์ดีขึ้น",
+                                "text": `ความสัมพันธ์กับคนรอบข้างดีขึ้น`
+                            }
+                        },
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "label": "ปัญหาทางกฎหมายลดลง",
+                                "text": `ปัญหาทางกฎหมายลดลง`
+                            }
+                        },
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "label": "อยากรู้สึกดีต่อตัวเอง",
+                                "text": `อยากรู้สึกดีต่อตัวเอง`
+                            }
+                        },
+                        {
+                            "type": "action",
+                            "action": {
+                                "type": "message",
+                                "label": "เพื่อจิตใจที่สงบ",
+                                "text": `เพื่อจิตใจที่สงบ`
+                            }
+                        },
+                    ]
+                },
+            },
+            { sendAsMessage: true }
+        ))
+    }
+
     // Run the proper function handler based on the matched Dialogflow intent name
     let intentMap = new Map();
     intentMap.set('check connect', checkConnect);
     intentMap.set('SET_USER_PROFILE', setUserProfile);
+    intentMap.set('EDIT_USER_PROFILE', setUserProfile);
     intentMap.set('RISK_ASSESSMENT', checkUserDrinking); //ถามคำถาม assit ข้อ 1
     intentMap.set('RISK_ASSESSMENT - yes', checkUserDrinkingIn3Month); //รับคำตอบข้อ 1 กรณีตอบว่าเคยดื่ม จะถามคำถามข้อ 2 ของ assist 
     intentMap.set('RISK_ASSESSMENT - drink in 3 month', riskAssessment_DrinkIn3Month);
@@ -760,5 +842,7 @@ export default ((request, response) => {
     intentMap.set('RISK_ASSESSMENT_RESULT - week', riskAssessmentResultWeek);
     intentMap.set('RISK_ASSESSMENT_RESULT - day', riskAssessmentResultDay);
     intentMap.set('RISK_ASSESSMENT_RESULT - risk', riskAssessmentResultRisk);
+    intentMap.set('ASSESS_MOTIVATION', assessMotivation);
+    intentMap.set('ASSESS_MOTIVATION - result', assessMotivationResult);
     agent.handleRequest(intentMap);
 });
